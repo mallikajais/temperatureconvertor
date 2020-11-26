@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temperature Converter</title>
+	<script type="text/javascript">
+		function convert(){
+			debugger;
+			var F=document.getElementById("T").value;
+			var C=document.getElementById("D").value;
+			var result;
+			if (C=='Fahrenheit') {
+			   result= F* 9 / 5 + 32;
+			   document.getElementById("result").value=Math.round(result);
+			}else{
+				result=(F-32) * 5 / 9;
+				document.getElementById("result").value=result;
+			}
+		}
+	</script>
+	<style type="text/css">
+	.bgimg{
+		background-image: url('w1.jpg');
+		width: 100%;
+		height: 71vh;
+		border-radius: 10px;
+		background-size: cover;
+		background-repeat: no-repeat;margin-top: 40px;
+	}
+	.btn{
+	  font-size: 30px;
+	  text-align: center;
+	  color:#3F51B5;
+	  background-color:#dcdff3;
+	  border: 2px solid #3F51B5;
+	  border-radius: 15px;
+	  padding:10px;
+	  }
+	</style>
+</head>
+<body style="background-color: #2196f317">
+	<div class="container">
+		<div class="text-center"><h1 style="text-align: center;padding-top: 20px;color: white;padding-bottom:20px;background-image: linear-gradient(#3f51b5, #2196f324);border-radius: 10px;font-size: 50px;"><b>Temperature Converter</b></h1></div>
+		<div class="container bgimg">
+			<div class="container" style="background-image: linear-gradient(#3F51B5, #ffeb3b0f);width: 70%;height: 65vh;margin-left:15%;border-radius: 10px;padding-top: 37px; ">
+				<div style="padding-top: 30px;text-align: center;">
+					<label  style=" padding-top: 25px;font-size: 35px;text-align: center;color: white;"> Degree - </label>
+					<select style="margin-top: 20px;border-radius: 10px;border:2px solid #3F51B5;width: 20%;height: 5vh;" id="D">
+						<option value="Fahrenheit"style="font-size:21px;">Fahrenheit</option>
+				  		<option value="Celsius" style="font-size:21px;">Celsius</option>
+					</select>
+				</div>
+				<div style="padding-top: 30px; text-align: center;">
+					<label style="margin-top: 40px;font-size: 35px;color: white;"> Temperature - </label>
+					<input type="number" id="T" style="border-radius: 10px;border:2px solid #3F51B5;height: 5vh;">
+				</div>
+				<div style="padding-top: 30px;text-align: center;">
+					<label style="color: white; font-size:35px;"> Result - </label>
+					<input type="number" id="result" placeholder="" style="padding: 20px;border-radius: 10px;border:2px solid #3F51B5;">
+				</div>
+				<div style="padding-top: 50px;text-align: center;">
+					<button class="btn" onclick="convert()"><b>Convert</b></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+ 
+
+
+
+
+
